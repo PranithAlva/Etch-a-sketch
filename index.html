@@ -4,7 +4,123 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" defer></script>
 		<title>Vite App</title>
 	</head>
-	<body></body>
+	<body>
+		<header class="heading1">Etch-a-sketch</header>
+		<div class="container">
+			<div class="menu">
+				<button class="options" id="box-button">BOX</button>
+				<div class="not-visible tool-box" id="box">
+					<button class="menu-button" id="small-grid" data-value="8">
+						8*8
+					</button>
+					<button class="menu-button" id="medium-grid" data-value="16">
+						16*16
+					</button>
+					<button class="menu-button" id="big-grid" data-value="32">
+						32*32
+					</button>
+				</div>
+				<button class="options" id="edit-button">EDIT</button>
+				<div class="not-visible tool-box" id="edit">
+					<button class="menu-button" id="eraser">ERASER</button>
+					<button class="menu-button" id="clear">CLEAR</button>
+					<button class="menu-button" id="undo">UNDO</button>
+				</div>
+			</div>
+			<hr />
+			<div class="workspace">
+				<div class="display-box" id="tools">
+					<label>
+						Draw <br />
+						<input type="color" name="base" id="color"
+					/></label>
+					<hr />
+					<p>
+						<label
+							><input type="checkbox" name="rainbow" id="rainbow" /> Rainbow
+						</label>
+					</p>
+				</div>
+				<div class="display-box" id="sketch-container">
+					<div id="sketch-box" class="sketch-box8" data-value="8">
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+						<div class="grid-box"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="display-box" id="loading-screen" style="border: hidden">
+				<h1>'Etch-a-sketch'</h1>
+				<p class="loading-animation">Loading.....</p>
+				<p>Please Wait</p>
+			</div>
+			<footer class="footer"></footer>
+		</div>
+	</body>
 </html>
