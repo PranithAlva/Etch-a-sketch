@@ -21,6 +21,23 @@ function handleUpdate() {
 	document.documentElement.style.setProperty("--color", this.value);
 }
 
+function rainbowColor() {
+	colorSet = [
+		"rgb(255,0,0)",
+		"rgb(0,255,0)",
+		"rgb(0,0,255",
+		"rgb(75, 0, 130)",
+		"rgb(238, 130, 238)",
+		"rgb(255, 255, 0)",
+		"rgb(255, 165, 0)",
+	];
+	let check = document.querySelector("#rainbow");
+	if (check.checked) {
+		const index = Math.floor(Math.random() * colorSet.length);
+
+		Systemcolor = colorSet[index];
+	}
+}
 function changeColor() {
 	console.log(Systemcolor);
 	this.style.background = Systemcolor;
@@ -58,3 +75,11 @@ const menuButtons = document.querySelectorAll(".menu-button");
 const sketchContainer = document.querySelector("#sketch-container");
 
 menuButtons.forEach((button) => button.addEventListener("click", handleClick));
+const gridBoxes = document.querySelectorAll(".grid-box");
+
+gridBoxes.forEach((gridBox) => {
+	gridBox.addEventListener("mouseover", changeColor);
+});
+
+const rainbow = document.getElementById("rainbow");
+rainbow.addEventListener("change", () => setInterval(rainbowColor, 500));

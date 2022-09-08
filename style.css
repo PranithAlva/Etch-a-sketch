@@ -227,8 +227,9 @@ select {
 }
 
 #sketch-container {
-	flex: 5;
-	height: 500px;
+	flex: 1 1 auto;
+	height: 700px;
+	width: 500px;
 }
 
 hr {
@@ -238,22 +239,25 @@ hr {
 #sketch-box {
 	display: grid;
 	grid-auto-flow: column;
-	gap: 5px;
+	justify-content: center;
 }
 
 .sketch-box8 {
 	grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px;
 	grid-template-rows: 60px 60px 60px 60px 60px 60px 60px 60px;
+	gap: 10px;
 }
 
 .sketch-box16 {
 	grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
 	grid-template-rows: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+	gap: 7px;
 }
 
 .sketch-box32 {
 	grid-template-columns: 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px;
 	grid-template-rows: 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px;
+	gap: 4px;
 }
 
 .grid-box {
