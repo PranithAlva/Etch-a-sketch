@@ -104,7 +104,6 @@ select {
 	top: 15%;
 	left: 25%;
 	text-align: center;
-	display: none;
 }
 
 @media (max-width: 800px) {
@@ -263,4 +262,34 @@ hr {
 .grid-box {
 	background: white;
 	border-radius: 5px;
+}
+
+footer {
+	background: black;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	min-height: 100px;
+	font-family: var(--apple-font);
+	margin-top: 300px;
+}
+
+@media (max-width: 1000px) {
+	.sketch-box8 {
+		grid-template-columns: 32px 32px 32px 32px 32px 32px 32px 32px;
+		grid-template-rows: 32px 32px 32px 32px 32px 32px 32px 32px;
+		gap: 10px;
+	}
+
+	.sketch-box16 {
+		grid-template-columns: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px;
+		grid-template-rows: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px;
+		gap: 7px;
+	}
+
+	.sketch-box32 {
+		grid-template-columns: 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px;
+		grid-template-rows: 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px 8px;
+		gap: 4px;
+	}
 }

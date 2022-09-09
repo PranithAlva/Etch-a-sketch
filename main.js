@@ -16,6 +16,11 @@ editButton.addEventListener("click", () => {
 
 const color = document.querySelector("#color");
 
+function dissappear() {
+	const loadingScreen = document.getElementById("loading-screen");
+	loadingScreen.classList.add("not-visible");
+}
+
 function handleUpdate() {
 	Systemcolor = this.value;
 	document.documentElement.style.setProperty("--color", this.value);
@@ -36,6 +41,7 @@ function rainbowColor() {
 		const index = Math.floor(Math.random() * colorSet.length);
 
 		Systemcolor = colorSet[index];
+		document.documentElement.style.setProperty("--color", Systemcolor);
 	}
 }
 function changeColor() {
@@ -48,6 +54,15 @@ color.addEventListener("input", handleUpdate);
 //setTimeout();
 
 function handleClick() {
+	if (this.dataset.value == "white") {
+		Systemcolor = "white";
+		return;
+	}
+	if (this.dataset.value == "all") {
+		let gridBoxes = document.querySelectorAll(".grid-box");
+		gridBoxes.forEach((gridBox) => (gridBox.style.background = "white"));
+		return;
+	}
 	const gridLength = this.dataset.value;
 	let sketchBox = document.querySelector("#sketch-box");
 	if (gridLength != sketchBox.dataset.value) {
@@ -83,3 +98,5 @@ gridBoxes.forEach((gridBox) => {
 
 const rainbow = document.getElementById("rainbow");
 rainbow.addEventListener("change", () => setInterval(rainbowColor, 500));
+
+setTimeout(dissappear, 5500);
